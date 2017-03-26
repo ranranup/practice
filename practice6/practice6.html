@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>practice</title>
+    </head>
+    <!-- CSS 实现：三角形triangle -->
+    <body>
+        
+    </body>
+    <script>
+        var arr = [2,3,2,4,5,6,8,7,8,10,11,10];
+        document.write("原数组：<br/>" + arr + "<br/><br/>");
+        var tmp = arr.reverse();
+        var s = new Set(arr);
+        var result = new Array();
+        for(let value of s.values()){
+            result.push(value);
+        }
+        var pp = result.reverse();
+        document.write("去除相同的数字，保留最后一个数字：<br/>" + pp);
+    </script>
+</html>
