@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>超酷数码钟表</title>
+    <style>
+        body {
+            background: #000;
+            color: #FFF;
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function toDou(n) {
+            if (n < 10) {
+                return '0' + n;
+            } else {
+                return '' + n;
+            }
+        }
+        window.onload = function () {
+            var aImg = document.getElementsByTagName('img');
+
+            function tick() {
+                var oDate = new Date();
+                var str = toDou(oDate.getHours()) + toDou(oDate.getMinutes()) + toDou(oDate.getSeconds());
+                for (var i = 0; i < aImg.length; i++) {
+                    aImg[i].src = 'images/' + str.charAt(i) + '.png';
+                }
+            }
+
+            setInterval(tick, 1000);
+            tick();
+        };
+    </script>
+</head>
+<body>
+<div style="margin-bottom:200px;"></div>
+<img src="images/0.png"/>
+<img src="images/0.png"/>
+:
+<img src="images/0.png"/>
+<img src="images/0.png"/>
+:
+<img src="images/0.png"/>
+<img src="images/0.png"/>
+</body>
+</html>

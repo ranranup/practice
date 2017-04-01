@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    background: #000;
+}
+
+input {
+    width: 200px;
+    height: 100px;
+    background: yellow;
+}
